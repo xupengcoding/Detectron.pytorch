@@ -119,6 +119,22 @@ DATASETS = {
         IM_PREFIX:
             'COCO_test2015_'
     },
+    'coco_2018_test':{  # 2018 test uses 2017 test images, 2017 test images has two split- test-challenge test-dev
+        IM_DIR:
+            _DATA_DIR + '/coco/images/test2017',
+        ANN_FN:
+            _DATA_DIR + '/coco/annotations/image_info_test2017.json',
+        IM_PREFIX:
+            'COCO_test2017_'
+    },
+    'coco_2018_test-dev':{
+        IM_DIR:
+            _DATA_DIR + '/coco/images/test2017',
+        ANN_FN:
+            _DATA_DIR + '/coco/annotations/image_info_test-dev2017.json',
+        IM_PREFIX:
+            'COCO_test2017_'
+    },
     'coco_2017_test-dev': {  # 2017 test-dev uses 2015 test images
         IM_DIR:
             _DATA_DIR + '/coco/images/test2015',

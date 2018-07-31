@@ -159,10 +159,12 @@ def test_net_on_dataset(
         )
     test_timer.toc()
     logger.info('Total inference time: {:.3f}s'.format(test_timer.average_time))
-    results = task_evaluation.evaluate_all(
-        dataset, all_boxes, all_segms, all_keyps, output_dir
-    )
-    return results
+    #for test 2018, no evaluation
+    #results = task_evaluation.evaluate_all(
+    #    dataset, all_boxes, all_segms, all_keyps, output_dir
+    #)
+    #return results
+    return []
 
 
 def multi_gpu_test_net_on_dataset(
